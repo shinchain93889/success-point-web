@@ -38,10 +38,10 @@ export default function AboutPage() {
             <div>
               <h2 className="font-headline text-3xl font-bold mb-4 text-primary">Our Mission</h2>
               <p className="text-lg text-muted-foreground mb-4">
-                Our mission is to bridge the digital divide by providing accessible, high-quality computer education and dependable tech support. We believe that technology should be a tool for empowerment, not a barrier.
+                Our goal is to make technology easy for everyone. We offer top-notch computer classes and reliable tech support to help you learn and succeed.
               </p>
               <p className="text-lg text-muted-foreground">
-                Whether you're starting your tech journey or are a business seeking expert IT solutions, we are committed to your success. We strive to create a learning environment that is welcoming, supportive, and focused on practical, real-world skills.
+                It doesn't matter if you're new to computers or a business needing IT help, we're here for you. We provide a friendly and supportive space to learn skills that you can use every day.
               </p>
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden shadow-xl">
