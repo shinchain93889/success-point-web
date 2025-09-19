@@ -8,6 +8,12 @@
       "imageHint": "computer lab"
     },
     {
+      "id": "hero-classroom",
+      "description": "A teacher in a classroom, holding a laptop and interacting with students.",
+      "imageUrl": "https://picsum.photos/seed/classroom/1920/1080",
+      "imageHint": "teacher classroom"
+    },
+    {
       "id": "hero-home-computer",
       "description": "A person working on a modern computer setup.",
       "imageUrl": "https://picsum.photos/seed/computer/1920/1080",

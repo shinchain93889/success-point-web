@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Laptop, Wrench, Network, Star, Users, BrainCircuit } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const placeholderHeroImage = PlaceHolderImages.find(p => p.id === 'hero-home-computer');
+const placeholderHeroImage = PlaceHolderImages.find(p => p.id === 'hero-classroom');
 
 const services = [
   {
