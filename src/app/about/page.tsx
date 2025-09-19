@@ -25,7 +25,7 @@ export default function AboutPage() {
     <>
       <section className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline text-4xl md:text-5xl font-bold">About Success Point Hub</h1>
+          <h1 className="font-headline text-4xl md:text-5xl font-bold">About Success Point Computer</h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-primary-foreground/80">
             Dedicated to demystifying technology and empowering our community through education and reliable service.
           </p>

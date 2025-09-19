@@ -14,7 +14,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center text-sm text-muted-foreground">
             <Copyright className="h-4 w-4 mr-1" />
-            <span>{new Date().getFullYear()} Success Point Hub. All Rights Reserved.</span>
+            <span>{new Date().getFullYear()} Success Point Computer. All Rights Reserved.</span>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ Q: How long do your courses last?
 A: Course duration varies. We have short workshops that last a few hours, as well as comprehensive courses that can span several weeks.
 
 Q: Do you provide certificates upon course completion?
-A: Yes, all students who successfully complete a course receive a certificate of completion from Success Point Hub.
+A: Yes, all students who successfully complete a course receive a certificate of completion from Success Point Computer.
 
 Q: What are your business hours?
 A: We are open from 9:00 AM to 6:00 PM, Monday to Saturday.

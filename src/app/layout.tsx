@@ -5,7 +5,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
-  title: 'Success Point Hub',
+  title: 'Success Point Computer',
   description: 'Your one-stop solution for computer training, repairs, and services.',
 };
 
