@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -5,6 +6,12 @@
       "description": "A modern computer lab with students working on their desktops.",
       "imageUrl": "https://picsum.photos/seed/hero-home/1920/1080",
       "imageHint": "computer lab"
+    },
+    {
+      "id": "hero-home-computer",
+      "description": "A person working on a modern computer setup.",
+      "imageUrl": "https://picsum.photos/seed/computer/1920/1080",
+      "imageHint": "computer"
     },
     {
       "id": "team-1",
