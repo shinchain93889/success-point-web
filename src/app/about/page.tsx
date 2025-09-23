@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import img1 from '../../../img/img1.jpg';
+import img2 from '../../../img/img2.jpg';
+import img3 from '../../../img/img3.jpg';
 
 const teamMembers = [
   {
@@ -21,6 +24,11 @@ const teamMembers = [
 ];
 
 export default function AboutPage() {
+  const gallery = [
+    { src: img1, alt: 'Training session' },
+    { src: img2, alt: 'Repair workspace' },
+    { src: img3, alt: 'Student collaboration' },
+  ];
   return (
     <>
       <section className="bg-primary text-primary-foreground py-16">
@@ -44,9 +52,9 @@ export default function AboutPage() {
                 It doesn't matter if you're new to computers or a business needing IT help, we're here for you. We provide a friendly and supportive space to learn skills that you can use every day.
               </p>
             </div>
-            <div className="relative h-80 rounded-lg overflow-hidden shadow-xl">
-                 <Image src="https://picsum.photos/seed/about-mission/600/400" alt="Team working together" data-ai-hint="team collaboration" layout="fill" objectFit="cover" />
-            </div>
+      <div className="relative h-80 rounded-lg overflow-hidden shadow-xl">
+        <Image src={img1} alt="Team working together" fill className="object-cover" />
+      </div>
           </div>
         </div>
       </section>
@@ -78,6 +86,20 @@ export default function AboutPage() {
                   <p className="text-accent font-semibold">{member.role}</p>
                 </CardContent>
               </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Facilities / Highlights strip */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <h3 className="font-headline text-2xl md:text-3xl font-bold text-center mb-6">Facilities & Moments</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {gallery.map((g, i) => (
+              <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-lg shadow">
+                <Image src={g.src} alt={g.alt} fill className="object-cover" />
+              </div>
             ))}
           </div>
         </div>

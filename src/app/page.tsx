@@ -5,6 +5,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Laptop, Wrench, Network, Star, Users, BrainCircuit } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
+// Local images
+import img1 from '../../img/img1.jpg';
+import img2 from '../../img/img2.jpg';
+import img3 from '../../img/img3.jpg';
+import img4 from '../../img/img4.jpg';
+import img5 from '../../img/img5.jpg';
+
 const placeholderHeroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
 
 const services = [
@@ -44,6 +51,13 @@ const features = [
 ]
 
 export default function Home() {
+  const localImages = [
+    { src: img1, alt: 'Computer lab setup' },
+    { src: img2, alt: 'Hands-on training' },
+    { src: img3, alt: 'Hardware repair desk' },
+    { src: img4, alt: 'Networking equipment' },
+    { src: img5, alt: 'Students collaborating' },
+  ];
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -102,6 +116,35 @@ export default function Home() {
           <div className="text-center mt-12">
             <Button asChild variant="link" className="text-primary text-lg">
                 <Link href="/services">Explore all services &rarr;</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Highlights */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex items-end justify-between gap-4 mb-8">
+            <div>
+              <h2 className="font-headline text-3xl md:text-4xl font-bold">Inside Our Center</h2>
+              <p className="mt-2 text-lg text-muted-foreground">A quick look at our space, training, and tools.</p>
+            </div>
+            <Button asChild variant="link" className="text-primary hidden md:inline-flex">
+              <Link href="/about">Learn more about us →</Link>
+            </Button>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {localImages.map((img, i) => (
+              <div key={i} className="group relative overflow-hidden rounded-lg shadow hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[4/3]">
+                  <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-[1.02] transition-transform" />
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 text-center md:hidden">
+            <Button asChild variant="link" className="text-primary">
+              <Link href="/about">Learn more about us →</Link>
             </Button>
           </div>
         </div>

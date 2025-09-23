@@ -26,7 +26,7 @@ export async function submitContactForm(
   if (!validatedFields.success) {
     return {
       success: false,
-      message: validatedFields.error.flatten().fieldErrors[Object.keys(validatedFields.error.flatten().fieldErrors)[0]][0]
+      message: validatedFields.error.issues[0]?.message ?? "Please check the form fields and try again."
     };
   }
 
