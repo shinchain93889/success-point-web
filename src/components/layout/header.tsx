@@ -26,8 +26,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex">
-          <Link href="/" className="flex items-center space-x-2">
-            <Logo className="h-6 w-auto" />
+          <Link href="/" className="flex items-center space-x-2 overflow-visible">
+            <Logo className="h-7 w-auto" />
           </Link>
         </div>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
@@ -60,8 +60,8 @@ export default function Header() {
             <SheetContent side="left">
                 <div className="flex flex-col h-full">
                     <div className="mb-8">
-                        <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
-                            <Logo className="h-6 w-auto" />
+            <Link href="/" className="flex items-center overflow-visible" onClick={() => setIsMobileMenuOpen(false)}>
+              <Logo className="h-7 w-auto" />
                         </Link>
                     </div>
                     <nav className="flex flex-col space-y-4">

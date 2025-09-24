@@ -3,9 +3,9 @@ import * as React from 'react';
 const Logo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 200 40"
-    width="120"
-    height="30"
+    viewBox="0 0 320 40"
+    preserveAspectRatio="xMinYMid meet"
+    style={{ overflow: 'visible' }}
     {...props}
   >
     <defs>
