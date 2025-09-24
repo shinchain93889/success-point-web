@@ -98,7 +98,7 @@ export default function AboutPage() {
                         src={member.image}
                         alt={member.name}
                         fill
-                        className="object-cover"
+                        className="object-cover object-[center_20%]"
                       />
                     </div>
                   )}
