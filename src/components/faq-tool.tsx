@@ -1,6 +1,7 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import { useEffect, useRef } from "react";
 import { BrainCircuit, Bot, Send } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -48,12 +49,12 @@ function SubmitButton() {
 }
 
 export default function FaqTool() {
-  const [state, formAction] = useFormState(askQuestionAction, initialState);
+  const [state, formAction] = useActionState(askQuestionAction, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     if (state.answer || state.error) {
-        formRef.current?.reset();
+      formRef.current?.reset();
     }
   }, [state]);
 
@@ -76,20 +77,20 @@ export default function FaqTool() {
           </form>
         </CardContent>
       </Card>
-      
+
       {state.error && (
         <Alert variant="destructive">
-            <AlertTitle>Error</AlertTitle>
-            <AlertDescription>{state.error}</AlertDescription>
+          <AlertTitle>Error</AlertTitle>
+          <AlertDescription>{state.error}</AlertDescription>
         </Alert>
       )}
 
       {state.answer && (
         <Alert className="border-primary">
-            <div className="flex items-center space-x-3 mb-2">
-                <Bot className="h-6 w-6 text-primary" />
-                <AlertTitle className="font-headline text-lg text-primary">AI Assistant's Answer</AlertTitle>
-            </div>
+          <div className="flex items-center space-x-3 mb-2">
+            <Bot className="h-6 w-6 text-primary" />
+            <AlertTitle className="font-headline text-lg text-primary">AI Assistant's Answer</AlertTitle>
+          </div>
           <AlertDescription className="text-foreground text-base leading-relaxed">
             {state.answer}
           </AlertDescription>
