@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Laptop, Wrench, Network, Star, Users, BrainCircuit } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+// import { PlaceHolderImages } from '@/lib/placeholder-images';
+import bgImage from '../../img/background_imgae.png';
 
 // Local images
 import img1 from '../../img/img1.jpg';
@@ -11,9 +12,8 @@ import img2 from '../../img/img2.jpg';
 import img3 from '../../img/img3.jpg';
 import img4 from '../../img/img4.jpg';
 import img5 from '../../img/img5.jpg';
-import img6 from '../../img/img6.png';
 
-const placeholderHeroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
+// const placeholderHeroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
 
 const services = [
   {
@@ -58,22 +58,19 @@ export default function Home() {
     { src: img3, alt: 'Hardware repair desk' },
     { src: img4, alt: 'Networking equipment' },
     { src: img5, alt: 'Students collaborating' },
-    { src: img6, alt: 'New image' },
+
   ];
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px] w-full text-white">
-        {placeholderHeroImage &&
-          <Image
-            src={placeholderHeroImage.imageUrl}
-            alt={placeholderHeroImage.description}
-            fill
-            className="object-cover"
-            priority
-            data-ai-hint={placeholderHeroImage.imageHint}
-          />
-        }
+        <Image
+          src={bgImage}
+          alt="Success Point background"
+          fill
+          className="object-cover"
+          priority
+        />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center p-4">
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight uppercase">
@@ -181,8 +178,8 @@ export default function Home() {
               "Success Point completely transformed my understanding of computers. The instructors are patient, knowledgeable, and truly dedicated to helping students succeed."
             </p>
             <footer className="mt-6">
-              <p className="font-semibold text-lg"> - Alex Johnson</p>
-              <p className="text-muted-foreground">Former Student</p>
+              <p className="font-semibold text-lg"> Pooja Mourya</p>
+              <p className="text-muted-foreground"> Student</p>
             </footer>
           </blockquote>
         </div>
