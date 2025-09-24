@@ -9,17 +9,17 @@ import img3 from '../../../img/img3.jpg';
 
 const teamMembers = [
   {
-    name: 'Jane Doe',
+    name: 'Prakash vairagi',
     role: 'Founder & Lead Instructor',
     image: team3,
   },
   {
-    name: 'John Smith',
+    name: 'Yogesh',
     role: 'Head Technician',
     image: team2,
   },
   {
-    name: 'Emily White',
+    name: 'Somender',
     role: 'Customer Support Specialist',
     image: team1,
   },
