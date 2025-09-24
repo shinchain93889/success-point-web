@@ -30,7 +30,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Our Office</h3>
-                  <p className="text-muted-foreground">123 Tech Avenue, Silicon Valley, CA 94000</p>
+                  <p className="text-muted-foreground">Transit camp (Rudrapur) near samsahan ghat</p>
                 </div>
               </div>
 
@@ -40,7 +40,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Email Us</h3>
-                  <p className="text-muted-foreground">contact@successpointhub.com</p>
+                  <p className="text-muted-foreground">successpoint@gmail.com</p>
                 </div>
               </div>
 
@@ -50,7 +50,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Call Us</h3>
-                  <p className="text-muted-foreground">(123) 456-7890</p>
+                  <p className="text-muted-foreground">+91 8449008009</p>
                 </div>
               </div>
             </div>
