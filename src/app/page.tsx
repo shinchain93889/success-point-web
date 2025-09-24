@@ -11,7 +11,6 @@ import img2 from '../../img/img2.jpg';
 import img3 from '../../img/img3.jpg';
 import img4 from '../../img/img4.jpg';
 import img5 from '../../img/img5.jpg';
-import img6 from '../../img/img6.png';
 
 const placeholderHeroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
 
@@ -58,7 +57,7 @@ export default function Home() {
     { src: img3, alt: 'Hardware repair desk' },
     { src: img4, alt: 'Networking equipment' },
     { src: img5, alt: 'Students collaborating' },
-    { src: img6, alt: 'New image' },
+
   ];
   return (
     <div className="flex flex-col">
@@ -181,8 +180,8 @@ export default function Home() {
               "Success Point completely transformed my understanding of computers. The instructors are patient, knowledgeable, and truly dedicated to helping students succeed."
             </p>
             <footer className="mt-6">
-              <p className="font-semibold text-lg"> - Alex Johnson</p>
-              <p className="text-muted-foreground">Former Student</p>
+              <p className="font-semibold text-lg"> Pooja Mourya</p>
+              <p className="text-muted-foreground"> Student</p>
             </footer>
           </blockquote>
         </div>
