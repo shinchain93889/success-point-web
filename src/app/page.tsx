@@ -11,6 +11,7 @@ import img2 from '../../img/img2.jpg';
 import img3 from '../../img/img3.jpg';
 import img4 from '../../img/img4.jpg';
 import img5 from '../../img/img5.jpg';
+import img6 from '../../img/img6.png';
 
 const placeholderHeroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
 
@@ -33,21 +34,21 @@ const services = [
 ];
 
 const features = [
-    {
-        icon: <Star className="h-8 w-8 text-accent" />,
-        title: 'Expert Instructors',
-        description: 'Learn from industry professionals with years of real-world experience.'
-    },
-    {
-        icon: <Users className="h-8 w-8 text-accent" />,
-        title: 'Personalized Approach',
-        description: 'We tailor our services to meet your specific needs and goals.'
-    },
-    {
-        icon: <BrainCircuit className="h-8 w-8 text-accent" />,
-        title: 'Cutting-Edge Tech',
-        description: 'We use and teach the latest technologies to keep you ahead of the curve.'
-    }
+  {
+    icon: <Star className="h-8 w-8 text-accent" />,
+    title: 'Expert Instructors',
+    description: 'Learn from industry professionals with years of real-world experience.'
+  },
+  {
+    icon: <Users className="h-8 w-8 text-accent" />,
+    title: 'Personalized Approach',
+    description: 'We tailor our services to meet your specific needs and goals.'
+  },
+  {
+    icon: <BrainCircuit className="h-8 w-8 text-accent" />,
+    title: 'Cutting-Edge Tech',
+    description: 'We use and teach the latest technologies to keep you ahead of the curve.'
+  }
 ]
 
 export default function Home() {
@@ -57,6 +58,7 @@ export default function Home() {
     { src: img3, alt: 'Hardware repair desk' },
     { src: img4, alt: 'Networking equipment' },
     { src: img5, alt: 'Students collaborating' },
+    { src: img6, alt: 'New image' },
   ];
   return (
     <div className="flex flex-col">
@@ -115,7 +117,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Button asChild variant="link" className="text-primary text-lg">
-                <Link href="/services">Explore all services &rarr;</Link>
+              <Link href="/services">Explore all services &rarr;</Link>
             </Button>
           </div>
         </div>
@@ -133,7 +135,7 @@ export default function Home() {
               <Link href="/about">Learn more about us →</Link>
             </Button>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {localImages.map((img, i) => (
               <div key={i} className="group relative overflow-hidden rounded-lg shadow hover:shadow-lg transition-shadow">
                 <div className="relative aspect-[4/3]">
@@ -152,37 +154,37 @@ export default function Home() {
 
       {/* Why Choose Us */}
       <section className="py-16 md:py-24 bg-white">
-          <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
-                  <h2 className="font-headline text-3xl md:text-4xl font-bold">Why Choose Success Point?</h2>
-                  <p className="mt-2 text-lg text-muted-foreground">The advantages of partnering with us.</p>
-              </div>
-              <div className="grid md:grid-cols-3 gap-10">
-                  {features.map((feature, index) => (
-                      <div key={index} className="text-center">
-                          <div className="flex justify-center items-center mb-4">
-                              {feature.icon}
-                          </div>
-                          <h3 className="font-headline text-xl font-semibold mb-2">{feature.title}</h3>
-                          <p className="text-muted-foreground">{feature.description}</p>
-                      </div>
-                  ))}
-              </div>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">Why Choose Success Point?</h2>
+            <p className="mt-2 text-lg text-muted-foreground">The advantages of partnering with us.</p>
           </div>
+          <div className="grid md:grid-cols-3 gap-10">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center items-center mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="font-headline text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Testimonial Section */}
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4 text-center">
-            <blockquote className="max-w-3xl mx-auto">
-                <p className="text-xl md:text-2xl font-medium italic">
-                    "Success Point completely transformed my understanding of computers. The instructors are patient, knowledgeable, and truly dedicated to helping students succeed."
-                </p>
-                <footer className="mt-6">
-                    <p className="font-semibold text-lg"> - Alex Johnson</p>
-                    <p className="text-muted-foreground">Former Student</p>
-                </footer>
-            </blockquote>
+          <blockquote className="max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl font-medium italic">
+              "Success Point completely transformed my understanding of computers. The instructors are patient, knowledgeable, and truly dedicated to helping students succeed."
+            </p>
+            <footer className="mt-6">
+              <p className="font-semibold text-lg"> - Alex Johnson</p>
+              <p className="text-muted-foreground">Former Student</p>
+            </footer>
+          </blockquote>
         </div>
       </section>
     </div>
