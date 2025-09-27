@@ -40,7 +40,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Email Us</h3>
-                  <p className="text-muted-foreground">Successpcinstitute@gmail.com</p>
+                  <p className="text-muted-foreground">successpcinstitute@gmail.com</p>
                 </div>
               </div>
 

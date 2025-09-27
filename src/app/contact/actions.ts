@@ -1,6 +1,7 @@
 "use server";
 
 import { z } from "zod";
+import { sendContactEmails } from "@/lib/mailer";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -30,13 +31,23 @@ export async function submitContactForm(
     };
   }
 
-  // Here you would typically send an email, save to a database, etc.
-  // We'll simulate a delay and then return a success message.
-  console.log("Contact Form Data:", validatedFields.data);
-  await new Promise(resolve => setTimeout(resolve, 1000));
+  const data = validatedFields.data;
+  try {
+    await sendContactEmails({
+      name: data.name,
+      email: data.email,
+      message: data.message,
+    });
+  } catch (e) {
+    console.error('Failed to send contact email', e);
+    return {
+      success: false,
+      message: 'Sorry, we could not send your message right now. Please try again later.',
+    };
+  }
 
   return {
     success: true,
-    message: "Thank you for your message! We'll get back to you shortly.",
+    message: "Thank you for your message! We've emailed a copy and will get back to you shortly.",
   };
 }
