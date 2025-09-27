@@ -14,8 +14,8 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
-  { href: "/faq", label: "AI FAQ" },
   { href: "/contact", label: "Contact" },
+  { href: "/faq", label: "AI FAQ" },
 ];
 
 export default function Header() {
@@ -26,7 +26,10 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex">
-          <Link href="/" className="flex items-center space-x-2 overflow-visible">
+          <Link
+            href="/"
+            className="flex items-center space-x-2 overflow-visible"
+          >
             <Logo className="h-7 w-auto" />
           </Link>
         </div>
@@ -37,7 +40,9 @@ export default function Header() {
               href={href}
               className={cn(
                 "transition-colors hover:text-primary",
-                pathname === href ? "text-primary font-semibold" : "text-foreground/60"
+                pathname === href
+                  ? "text-primary font-semibold"
+                  : "text-foreground/60"
               )}
             >
               {label}
@@ -45,7 +50,10 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild className="hidden md:inline-flex bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Button
+            asChild
+            className="hidden md:inline-flex bg-accent hover:bg-accent/90 text-accent-foreground"
+          >
             <Link href="/contact">Get a Quote</Link>
           </Button>
 
@@ -58,33 +66,47 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
-                <div className="flex flex-col h-full">
-                    <div className="mb-8">
-            <Link href="/" className="flex items-center overflow-visible" onClick={() => setIsMobileMenuOpen(false)}>
-              <Logo className="h-7 w-auto" />
-                        </Link>
-                    </div>
-                    <nav className="flex flex-col space-y-4">
-                        {navLinks.map(({ href, label }) => (
-                            <Link
-                                key={label}
-                                href={href}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className={cn(
-                                    "text-lg transition-colors hover:text-primary",
-                                    pathname === href ? "text-primary font-semibold" : "text-foreground/80"
-                                )}
-                            >
-                                {label}
-                            </Link>
-                        ))}
-                    </nav>
-                    <div className="mt-auto pt-4">
-                        <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Get a Quote</Link>
-                        </Button>
-                    </div>
+              <div className="flex flex-col h-full">
+                <div className="mb-8">
+                  <Link
+                    href="/"
+                    className="flex items-center overflow-visible"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <Logo className="h-7 w-auto" />
+                  </Link>
                 </div>
+                <nav className="flex flex-col space-y-4">
+                  {navLinks.map(({ href, label }) => (
+                    <Link
+                      key={label}
+                      href={href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={cn(
+                        "text-lg transition-colors hover:text-primary",
+                        pathname === href
+                          ? "text-primary font-semibold"
+                          : "text-foreground/80"
+                      )}
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </nav>
+                <div className="mt-auto pt-4">
+                  <Button
+                    asChild
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                  >
+                    <Link
+                      href="/contact"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Get a Quote
+                    </Link>
+                  </Button>
+                </div>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
