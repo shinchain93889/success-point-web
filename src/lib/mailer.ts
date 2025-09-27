@@ -19,7 +19,7 @@ async function getTransport() {
   if (useTest) {
     const testAccount = await nodemailer.createTestAccount();
     // eslint-disable-next-line no-console
-    console.info('[mailer] Using Ethereal test SMTP account');
+    console.info('[mailer] Using Ethereal test SMTP account (no real emails sent)');
     return nodemailer.createTransport({
       host: 'smtp.ethereal.email',
       port: 587,
@@ -31,6 +31,8 @@ async function getTransport() {
     });
   }
 
+  // eslint-disable-next-line no-console
+  console.info('[mailer] Using Gmail SMTP for real email delivery');
   return nodemailer.createTransport({
     host: SMTP_HOST,
     port: SMTP_PORT,
@@ -70,6 +72,7 @@ export async function sendContactEmails(data: ContactPayload) {
   } as const;
 
   const infoBusiness = await transporter.sendMail(toBusiness);
+  console.log('[mailer] Business email sent successfully to:', BUSINESS_EMAIL);
 
   // In test mode, log the preview URL
   const testUrlBusiness = nodemailer.getTestMessageUrl(infoBusiness);
@@ -92,6 +95,7 @@ export async function sendContactEmails(data: ContactPayload) {
              <p style="white-space: pre-line;">${data.message}</p>
              <p>Regards,<br/>Success Point Computer</p>`,
     });
+    console.log('[mailer] User acknowledgment sent successfully to:', data.email);
     const testUrlUser = nodemailer.getTestMessageUrl(infoUser);
     if (testUrlUser) {
       // eslint-disable-next-line no-console

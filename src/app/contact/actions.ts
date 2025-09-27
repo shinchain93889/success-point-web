@@ -38,11 +38,12 @@ export async function submitContactForm(
       email: data.email,
       message: data.message,
     });
+    console.log('Contact email sent successfully for:', data.name, data.email);
   } catch (e) {
     console.error('Failed to send contact email', e);
     return {
       success: false,
-      message: 'Sorry, we could not send your message right now. Please try again later.',
+      message: 'Sorry, we could not send your message right now. Please try again later or contact us directly.',
     };
   }
 
