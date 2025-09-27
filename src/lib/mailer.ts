@@ -4,6 +4,7 @@ const SMTP_HOST = process.env.SMTP_HOST || 'smtp.gmail.com';
 const SMTP_PORT = Number(process.env.SMTP_PORT || 587);
 const SMTP_USER = process.env.SMTP_USER;
 const SMTP_PASSWORD = process.env.SMTP_PASSWORD;
+const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL || 'saxenaroni360@gmail.com';
 
 if (!SMTP_USER || !SMTP_PASSWORD) {
   // We don't throw here to avoid crashing builds; runtime will handle and show a friendly error.
@@ -55,7 +56,7 @@ export async function sendContactEmails(data: ContactPayload) {
 
   const toBusiness = {
     from: fromAddress,
-    to: 'successpcinstitute@gmail.com',
+    to: BUSINESS_EMAIL,
     subject: `New contact from ${data.name}`,
     replyTo: data.email || undefined,
     text: `You received a new contact submission:\n\nName: ${data.name}\nEmail: ${data.email || 'N/A'}\n\nMessage:\n${data.message}`,
@@ -83,7 +84,7 @@ export async function sendContactEmails(data: ContactPayload) {
       from: fromAddress,
       to: data.email,
       subject: 'We received your message – Success Point Computer',
-      replyTo: 'saxenaroni360@gmail.com',
+      replyTo: BUSINESS_EMAIL,
       text: `Hi ${data.name},\n\nThanks for reaching out to Success Point Computer. We received your message and will get back to you soon.\n\nYour message:\n${data.message}\n\nRegards,\nSuccess Point Computer`,
       html: `<p>Hi ${data.name},</p>
              <p>Thanks for reaching out to <strong>Success Point Computer</strong>. We received your message and will get back to you soon.</p>
